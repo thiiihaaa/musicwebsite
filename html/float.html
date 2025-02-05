@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Text on Hover</title>
+    <style>
+        .floating-text {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            color: #007BFF;
+            transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+        }
+
+        .floating-text:hover {
+            transform: translateY(-10px); /* Move the text 10px up when hovered */
+        }
+
+        .container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="floating-text">Hover over this text to make it float!</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+
+#musicgenre-gridBox{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+    margin: 0 auto;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 230px;
+    height: 200px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF4081;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.flip-box-back {
+    background-color: #17a2b8;
+    transform: rotateY(180deg);
+}
+
+.flip-box #btn{
+    margin: 30px 55px;
+    width: 110px;
+    border-radius: 30px;
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+    </style>
+</head>
+<body>
+    <div id="musicgenre-gridBox">
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                </div>
+            </div>
+            <button id="btn"><a href="#">Pop</a>
+            </button>
+        </div>
+    
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                </div>
+            </div>
+            <button id="btn"><a href="#">Rock</a>
+            </button>
+        </div>
+    
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                </div>
+            </div>
+            <button id="btn"><a href="#">R&B</a>
+            </button>
+        </div>
+    
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                </div>
+            </div>
+            <button id="btn"><a href="#">Rap</a>
+            </button>
+        </div>
+    
+        <div class="flip-box">
+            <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <h2>Front Side</h2>
+                </div>
+                <div class="flip-box-back">
+                    <h2>Back Side</h2>
+                </div>
+            </div>
+            <button id="btn"><a href="#">Other Genres</a>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>
