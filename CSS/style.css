@@ -14,7 +14,7 @@ body{
     z-index: 1000;
 }
 .top-bar{
-    background-color: #333;
+    background-color: #1E1E1E;
     width: 100vw;
     height: 65px;
     box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
@@ -26,16 +26,20 @@ body{
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
-    color: aliceblue;
-    padding: 20px 0 0 20px;
+    color: #1ED760;
+    letter-spacing: 1px;
+    padding: 20px 0 0 30px;
 }
 .transform-bar{
-    background-color: #FF4081;
+    background-color: #1ED760;
     width: 70vw;
     height: 35px;
     margin: 0 auto;
     transform: translateY(-20px);
     border-radius: 50px;
+    box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
 }
 nav ul li a{
     text-decoration: none;
@@ -44,6 +48,10 @@ nav ul li a{
     font-family: "Fugaz One", serif;
     font-weight: 400;
     font-style: normal;
+}
+nav ul li :hover{
+    opacity: 0.5;
+    
 }
 nav ul{
     display: flex;
@@ -121,7 +129,7 @@ nav ul li{
 }
 
 .flip-box-back {
-    background-color: #333;
+    background-color: #0da141;
     transform: rotateY(180deg);
     overflow-y: scroll;
     position: relative;
@@ -209,11 +217,18 @@ nav ul li{
     justify-content: space-between;
     margin: 10px auto;
     width: 90%;
-    border-bottom: #cdcdcd 1px dotted;
+    border-bottom: #464646 1px dotted;
+}
+.seemore-button #seemore-btn button{
+    width: 20px;
+    border-radius: 25px;
+    background-color: #0da141;
+    color: #fff;
+    border: none;
 }
 
 .seemore-button h3 a{
-    color: #333;
+    color: #1ED760;
     font-family: "Fugaz One", serif;
     font-weight: 400;
     font-style: normal;
@@ -291,7 +306,6 @@ nav ul li{
     font-size: 35px;
     color: #333 ;
     margin-left: 60px;
-    padding-top: 20px;
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
@@ -304,7 +318,7 @@ nav ul li{
     width: 90%;
     height: 400px;
     border-radius: 10px;
-    background-color: #333333;
+    border: #021709 dotted 1px;
     overflow-x: scroll;
     margin: 50px auto 30px auto;
     box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
@@ -321,10 +335,16 @@ nav ul li{
     margin: auto 30px; 
     position: relative;
 }
+.artistpic a{
+    color: #fff;
+}
 .artistpic img{
     width: 100%;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 30px;
+}
+.artistpic img:hover{
+    border: #002d10 solid 2px;
 }
 
 .artistpic #artist-name{
@@ -335,7 +355,7 @@ nav ul li{
 .artist-name{
     position: absolute;
     bottom: -35px;
-    color: #fff;
+    color: #333;
     text-align: center;
     width: 100%;
     font-family: "Fugaz One", serif;
@@ -345,5 +365,23 @@ nav ul li{
 .footer{
     width: 100%;
     height: 300px;
-    background-color: #a0264f;
+    background-color: #021709;
 }
+footer p{
+    color: #fff;
+    text-align: center;
+    padding-top: 260px;
+}
+/*End of Home Page*/
+
+/*Start of Genres page*/
+.musicgenre-title h1{
+    padding-top: 110px;
+    padding-left: 30px;
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #333;
+}
+
