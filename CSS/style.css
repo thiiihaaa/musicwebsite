@@ -420,14 +420,164 @@ footer p{
 /*End of Home Page*/
 
 /*Start of Genres page*/
-.musicgenre-title h1{
-    padding-left: 30px;
+.genres-title{
+    padding-top: 130px;
+    font-size: 35px;
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 30px;
-    color: #333;
+    margin-left: 80px;
+    margin-bottom: 30px;
 }
+#musicgenre-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 90vw;
+    margin: 0 auto 80px auto;
+}
+.musicbgpic {
+    position: relative;
+    flex-grow: 1;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    margin: 0 auto;
+}
+.musicbgpic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Music-genrePics/pop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(20px);
+    z-index: 1;
+}
+.rockbgpic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Music-genrePics/Rock.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(20px);
+    z-index: 1;
+}
+.rnbbgpic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Music-genrePics/R&B.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    filter: blur(20px);
+    z-index: 1;
+}
+.rapbgpic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Music-genrePics/Rap.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    filter: blur(20px);
+    z-index: 1;
+}
+.content-overlay {
+    width: 500px;
+    position: relative;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+    margin: auto 100px auto 0;
+}
+.content-overlay h2{
+    color: #FFFAFA;
+    font-size: 25px;
+    font-family: "Fugaz One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+.content-overlay p{
+    line-height: 27px;
+    letter-spacing: -0.5px;
+    font-family: "Kaisei Tokumin", serif;
+    font-size: 16px;
+    font-weight: 200;
+    font-style: normal;
+    color: #fff;
+}
+.innerpic-musicgenres {
+    position: relative;
+    width: 300px;
+    height: 280px;
+    background-color: #ff6464;
+    z-index: 3;
+    margin: auto 0 auto 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.innerpic-musicgenres img{
+    height: 100%;
+    width: 100%;
+}
+.musicchart-playlist{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto 150px auto;
+    box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    
+}
+.title{
+    font-size: 35px;
+    font-family: "Shrikhand", serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #333;
+    line-height: 50px;
+    letter-spacing: 0.5px;
+    margin: auto 0;
+    padding-bottom: 80px;
+}
+.musicchart-playlist span{
+    color: #1ED760;
+}
+.playlist{
+    padding-bottom: 10px;
+}
+.musicchart iframe{
+    box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 7px 8px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.75);
+}
+/*Gernes Page End*/
+
+
 /*Start Artist page*/
 .artist-title{
     padding-top: 130px;
@@ -519,4 +669,31 @@ footer p{
 .artistpage-artistpic p:hover{
     color: #1ED760;
     background-color: #021709;
+}
+/*Artist Page End*/
+
+/*Chart Page start*/
+.globalchart-title h1{
+    padding-top: 130px;
+    font-size: 30px;
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 65px;
+    padding-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+.globalchart-title{
+    width: 100vw;
+    box-shadow: 0px 7px 8px -1px rgba(0, 0, 0, 0.8);
+-webkit-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.8);
+-moz-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.8);
+}
+.chart-page .playlist{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.chart-page span{
+    color: #1ED760;
 }
