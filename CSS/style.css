@@ -5,7 +5,7 @@ a{
 }
 body{
     margin: 0 auto;
-    background: #fff5f8;
+    background: #FFFAFA;
    
 
 }
@@ -429,12 +429,24 @@ footer p{
     color: #333;
 }
 /*Start Artist page*/
-.artist-country{
+.artist-title{
     padding-top: 130px;
+    font-size: 35px;
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 25px;
+}
+.artist-country{
+    padding-top: 40px;
     font-size: 25px;
     font-family: "Shrikhand", serif;
     font-weight: 400;
     font-style: normal;
+    width: 90vw;
+    margin: 0 auto;
     border-bottom: #021709 dotted 1px;
 }
 .artist-country ul{
@@ -446,40 +458,65 @@ footer p{
 .artist-country ul li{
     padding-left: 50px;
 }
+.global-green{
+    color: #1ED760;
+}
+.text-color{
+    color: #1ED760;
+}
 .artist-grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 25px;
-    margin: 30px 0;
-
-
+    gap: 30px;
+    margin: 30px auto;
+    width: 70%;
 }
 .artistpage-artistpic{
     background-color: #4f4f4f;
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     border-radius: 15px;
+    box-shadow: 0px 7px 8px -1px rgba(0, 0, 0, 0.8);
+-webkit-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.8);
+-moz-box-shadow: 0px 7px 8px -1px rgba(0,0,0,0.8);
 }
+
+
 .artistpage-artistpic img{
     position: absolute ;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    top: 50%;   /* Adjust the top position */
-    left: 50%;  /* Adjust the left position */
-    transform: translate(-50%, -50%);  /* Center the image */
+    top: 50%;   
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+    transition: all 0.5s ease-in-out;
 }
-.artistpage-artistpic p {
+.artistpage-artistpic img:hover{
+    width: 110%;
+    height: 110%;
+    transition: all 0.5s ease-in-out;
+}
+
+.artistpage-artistpic p{
+    font-size: 11px;
     position: absolute;
-    bottom: 10px; /* Adjust the vertical position of the text */
-    left: 10px; /* Adjust the horizontal position of the text */
+    bottom: 10px;
+    left: 10px; 
     margin: 0;
-    color: white; /* Text color */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 5px; /* Padding around the text */
-    border-radius: 3px; /* Rounded corners */
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px; 
+    border-radius: 3px; 
     z-index: 2;
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+.artistpage-artistpic p:hover{
+    color: #1ED760;
+    background-color: #021709;
 }

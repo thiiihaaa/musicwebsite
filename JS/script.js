@@ -50,7 +50,7 @@ document.querySelector('select[name="top_artists_chart"]').addEventListener('cha
     let artistName = document.getElementById('artistname1');
     if (selectetValue==='Global'){
         artistPhoto.src = 'G-artist-images/TaylorSwift.jpg';
-        artistName.innerHTML = '<a href="#">Taylor Swift</a>';
+        artistName.innerHTML = '<a href="./artist.html">Taylor Swift</a>';
     } else if(selectetValue==='Japan'){
         artistPhoto.src = './J-artist-images/Mrs.GREENAPPLE.jpg';
         artistName.innerHTML = '<a href="#">Mrs.GREEN APPLE</a>';
@@ -69,7 +69,7 @@ document.querySelector('select[name="top_artists_chart"]').addEventListener('cha
         artistName.innerHTML = '<a href="#">Bad Bunny</a>';
     } else if(selectetValue==='Japan'){
         artistPhoto.src = './J-artist-images/back number.jpg';
-        artistName.innerHTML = '<a href="#">back number</a>';
+        artistName.innerHTML = '<a href="./artist.html">back number</a>';
     } else if(selectetValue==='Korea'){
         artistPhoto.src = './K-artist-images/IU.jpg';
         artistName.innerHTML = '<a href="#">IU</a>';
@@ -206,10 +206,4 @@ document.querySelector('select[name="top_artists_chart"]').addEventListener('cha
 
 // Artist page//
 
-function changeImage(imageId, newSrc) {
-    document.getElementById(imageId).src = newSrc;
-}
 
-document.getElementById('japan').addEventListener('click', function() {
-    changeImage('artistimg1', './J-artist-images/Ado.jpg');
-});
