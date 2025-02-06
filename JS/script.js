@@ -44,7 +44,7 @@ document.getElementById('artistpic-scroll-right').addEventListener('click',funct
 // End of ArtistPic scrolling// 
 
 //Artist chart//
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic1');
     let artistName = document.getElementById('artistname1');
@@ -60,7 +60,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic2');
     let artistName = document.getElementById('artistname2');
@@ -76,7 +76,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic3');
     let artistName = document.getElementById('artistname3');
@@ -92,7 +92,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic4');
     let artistName = document.getElementById('artistname4');
@@ -108,7 +108,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic5');
     let artistName = document.getElementById('artistname5');
@@ -124,7 +124,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic6');
     let artistName = document.getElementById('artistname6');
@@ -140,7 +140,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic7');
     let artistName = document.getElementById('artistname7');
@@ -156,7 +156,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic8');
     let artistName = document.getElementById('artistname8');
@@ -172,7 +172,7 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic9');
     let artistName = document.getElementById('artistname9');
@@ -188,13 +188,13 @@ document.getElementById('artist-chart').addEventListener('change',function(){
     } 
 })
 
-document.getElementById('artist-chart').addEventListener('change',function(){
+document.querySelector('select[name="top_artists_chart"]').addEventListener('change',function(){
     let selectetValue = this.value;
     let artistPhoto = document.getElementById('artistpic10');
     let artistName = document.getElementById('artistname10');
     if (selectetValue==='Global'){
-        artistPhoto.src = 'G-artist-images/Bad Bunny.jpg';
-        artistName.innerHTML = '<a href="#">Bad Bunny</a>';
+        artistPhoto.src = 'G-artist-images/Teddy Swims.jpg';
+        artistName.innerHTML = '<a href="#">Teddy Swims</a>';
     } else if(selectetValue==='Japan'){
         artistPhoto.src = './J-artist-images/RADWIPS.jpg';
         artistName.innerHTML = '<a href="#">RADWIPS</a>';
@@ -203,3 +203,13 @@ document.getElementById('artist-chart').addEventListener('change',function(){
         artistName.innerHTML = '<a href="#">Lee Mu-jin</a>';
     } 
 })
+
+// Artist page//
+
+function changeImage(imageId, newSrc) {
+    document.getElementById(imageId).src = newSrc;
+}
+
+document.getElementById('japan').addEventListener('click', function() {
+    changeImage('artistimg1', './J-artist-images/Ado.jpg');
+});

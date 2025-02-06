@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Kaisei+Tokumin&family=Shrikhand&display=swap');
 a{
     text-decoration: none;
+    color: #333;
 }
 body{
     margin: 0 auto;
@@ -49,9 +50,8 @@ nav ul li a{
     font-weight: 400;
     font-style: normal;
 }
-nav ul li :hover{
-    opacity: 0.5;
-    
+nav ul li a:hover{
+    text-decoration: underline;
 }
 nav ul{
     display: flex;
@@ -93,6 +93,11 @@ nav ul li{
     height: 200px;
     perspective: 1000px; /*for 3D effect */
 }
+.flip-box button:hover {
+    background-color: #021709;
+    color: #1ED760;
+}
+
 
 .flip-box-inner {
     position: relative;
@@ -217,7 +222,7 @@ nav ul li{
     justify-content: space-between;
     margin: 10px auto;
     width: 90%;
-    border-bottom: #464646 1px dotted;
+    border-bottom: #021709 1px dotted;
 }
 .seemore-button #seemore-btn button{
     width: 20px;
@@ -228,7 +233,7 @@ nav ul li{
 }
 
 .seemore-button h3 a{
-    color: #1ED760;
+    color: #0da141;
     font-family: "Fugaz One", serif;
     font-weight: 400;
     font-style: normal;
@@ -335,13 +340,12 @@ nav ul li{
     margin: auto 30px; 
     position: relative;
 }
-.artistpic a{
-    color: #fff;
-}
+
 .artistpic img{
     width: 100%;
     height: 100%;
     border-radius: 30px;
+    border: #002d10 solid 2px;
 }
 .artistpic img:hover{
     border: #002d10 solid 2px;
@@ -362,21 +366,61 @@ nav ul li{
     font-weight: 300;
     font-style: normal;
 }
-.footer{
+.artistpic a .artist-name:hover{
+   text-decoration: underline;
+}
+footer{
     width: 100%;
-    height: 300px;
     background-color: #021709;
+}
+.footer-flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a{
+    color: #fff;
+}
+.footer-nav ul li{
+    padding-top: 25px;
+    font-size: 18px;
+}
+.footer-nav ul li a:hover{
+    text-decoration: underline;
+}
+.footer-nav ul{
+    margin: 10px 150px 10px 0;
+}
+.footer-logo img{
+    margin: 30px 0 20px 100px;
+}
+.footer-logo p{
+    margin: 10px 0 20px 100px;
+}
+.footer-contact {
+    margin: 0 0 30px 100px;
+}
+.footer-social{
+    margin: 0 0 30px 100px;
+}
+.footer-social a{
+    padding-left: 10px;
+    font-size: 18px;
+}
+.footer-social a:hover{
+    color: #1ED760;
 }
 footer p{
     color: #fff;
+}
+.footer-legal{
     text-align: center;
-    padding-top: 260px;
+    padding-bottom: 20px;
 }
 /*End of Home Page*/
 
 /*Start of Genres page*/
 .musicgenre-title h1{
-    padding-top: 110px;
     padding-left: 30px;
     font-family: "Shrikhand", serif;
     font-weight: 400;
@@ -384,4 +428,58 @@ footer p{
     font-size: 30px;
     color: #333;
 }
+/*Start Artist page*/
+.artist-country{
+    padding-top: 130px;
+    font-size: 25px;
+    font-family: "Shrikhand", serif;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom: #021709 dotted 1px;
+}
+.artist-country ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.artist-country ul li{
+    padding-left: 50px;
+}
+.artist-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    margin: 30px 0;
 
+
+}
+.artistpage-artistpic{
+    background-color: #4f4f4f;
+    height: 250px;
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+.artistpage-artistpic img{
+    position: absolute ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 50%;   /* Adjust the top position */
+    left: 50%;  /* Adjust the left position */
+    transform: translate(-50%, -50%);  /* Center the image */
+}
+.artistpage-artistpic p {
+    position: absolute;
+    bottom: 10px; /* Adjust the vertical position of the text */
+    left: 10px; /* Adjust the horizontal position of the text */
+    margin: 0;
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 5px; /* Padding around the text */
+    border-radius: 3px; /* Rounded corners */
+    z-index: 2;
+}
